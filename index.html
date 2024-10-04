@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advent of CTF - Capture the Flag Event</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Advent of CTF</div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#quizzes">Challenges</a></li>
+        <li><a href="#leaderboard">Quote</a></li>
+        <li><a href="#progress">My Progress</a></li>
+        <li><a href="#profile">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Advent of CTF</h1>
+      <p>Test your hacking skills with our challenging puzzles and capture the flag to earn points. Show off your knowledge in HTML, Python, and Cybersecurity!</p>
+      <a href="#quizzes" class="btn-start">Start Challenges</a>
+    </div>
+  </section>
+
+  <!-- Challenge Rooms -->
+  <section id="quizzes" class="challenge-rooms">
+    <h2>Challenges</h2>
+    <div class="quiz-room">
+      <h3><i class="fas fa-code"></i> HTML Room</h3>
+      <p>Test your knowledge of HTML and web vulnerabilities.</p>
+      <button><a href="aoc-html.html">Find Me</a></button>
+      <input type="text" id="html-flag" placeholder="Enter flag" />
+      <button onclick="submitFlag('html')">Submit HTML Flag</button>
+    </div>
+    <div class="quiz-room">
+      <h3><i class="fas fa-laptop-code"></i> Python Room</h3>
+      <p>Solve programming problems and encryption puzzles.</p>
+            <button><a href="aoc-py.html">Find Me</a></button>
+      <input type="text" id="python-flag" placeholder="Enter flag" />
+      <button onclick="submitFlag('python')">Submit Python Flag</button>
+    </div>
+    <div class="quiz-room">
+      <h3><i class="fas fa-shield-alt"></i> Cybersecurity Room</h3>
+      <p>Identify and exploit security vulnerabilities to capture flags.</p>
+            <button><a href="aoc-cyber.html">Find Me</a></button>
+      <input type="text" id="cybersecurity-flag" placeholder="Enter flag" />
+      <button onclick="submitFlag('cybersecurity')">Submit Cybersecurity Flag</button>
+    </div>
+  </section>
+
+  <!-- Leaderboard -->
+  <section id="leaderboard" class="leaderboard">
+    <h2>Happy Hacking</h2>
+    <ul id="leaderboard-list">
+      <!-- Leaderboard dynamically populated -->
+    </ul>
+  </section>
+
+  <!-- Progress Section -->
+  <section id="progress" class="progress-section">
+    <h2>My Progress</h2>
+    <div class="progress-details">
+      <p>User: <span id="progress-user-name"></span></p>
+      <p>Total Points: <span id="total-points"></span></p>
+      <ul id="progress-list">
+        <!-- User progress dynamically populated -->
+      </ul>
+    </div>
+    <button id="certificate-btn" style="display: none;" onclick="generateCertificate()">Download Certificate</button>
+  </section>
+
+  <!-- User Profile -->
+  <section id="profile" class="profile-section">
+    <h2>Profile</h2>
+    <form id="profile-form">
+      <input type="text" id="profile-name" placeholder="Enter your name" required>
+      <button type="submit">Save Profile</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Advent of CTF. All Rights Reserved.</p>
+  </footer>
+
+  <div id="popup" class="popup">
+    <p id="popup-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
